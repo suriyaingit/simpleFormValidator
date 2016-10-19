@@ -56,6 +56,8 @@ var SimpleFormValidator = (function() {
 				message : msg,
 				length : len
 			});
+			
+			$(this).after(errorDiv);
 
 		});
 
@@ -76,7 +78,7 @@ var SimpleFormValidator = (function() {
 			
 			elementsArray.push($(this));
 			eleNameArray.push($(this).prop('name'));
-			$(this).after(errorDiv);
+		 
 		});
 
 		$.each(config.rules,
